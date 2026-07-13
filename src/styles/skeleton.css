@@ -1,0 +1,68 @@
+/* AutoSkeleton theme + shimmer. Override the custom properties globally
+ * (via createAutoSkeleton) or per-instance with inline style. */
+.as-root {
+  --as-base: #e2e5e9;
+  --as-highlight: #f2f4f7;
+  --as-radius: 4px;
+  --as-duration: 1.5s;
+  position: relative;
+}
+
+.as-canvas {
+  position: relative;
+  overflow: hidden;
+}
+
+.as-primitive {
+  position: absolute;
+  background-color: var(--as-base);
+  border-radius: var(--as-radius);
+  background-image: linear-gradient(
+    90deg,
+    var(--as-base) 0%,
+    var(--as-highlight) 50%,
+    var(--as-base) 100%
+  );
+  background-size: 200% 100%;
+  animation: as-shimmer var(--as-duration) ease-in-out infinite;
+}
+
+.as-primitive--text {
+  border-radius: 999px;
+}
+
+/* Explicit opt-out: static gray, no shimmer (via `animation: false` / :animated="false"). */
+.as-root--static .as-primitive {
+  animation: none;
+  background-image: none;
+}
+
+@keyframes as-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Crossfade between skeleton and real content. */
+.as-fade-enter-active,
+.as-fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.as-fade-enter-from,
+.as-fade-leave-to {
+  opacity: 0;
+}
+
+/* Respect users who opt out of motion. */
+@media (prefers-reduced-motion: reduce) {
+  .as-primitive {
+    animation: none;
+  }
+  .as-fade-enter-active,
+  .as-fade-leave-active {
+    transition: none;
+  }
+}
