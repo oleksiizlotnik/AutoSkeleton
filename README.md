@@ -1,4 +1,5 @@
 # auto-skeleton-vue
+[![npm version](https://img.shields.io/npm/v/auto-skeleton-vue.svg)](https://www.npmjs.com/package/auto-skeleton-vue)
 
 Auto-generated skeleton loaders for **Vue 3** that mirror a component's *real
 rendered layout* — no separate skeleton component to author, and it stays in
@@ -15,7 +16,8 @@ placeholder to keep matching your layout.
 
 ## Live demo
 
-**[Live demo →](https://oleksiizlotnik.github.io/AutoSkeleton/)** &nbsp;·&nbsp;
+**[Live demo →](https://oleksiizlotnik.github.io/AutoSkeleton/)**
+
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/auto-skeleton-vue)
 
 Toggle **loading** to watch each component's skeleton generate itself.
