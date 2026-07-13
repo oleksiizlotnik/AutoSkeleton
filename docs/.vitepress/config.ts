@@ -23,6 +23,13 @@ export default defineConfig({
   // understand what the package is.
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/AutoSkeleton/favicon.svg' }],
+    [
+      'meta',
+      {
+        name: 'google-site-verification',
+        content: 'UEN_IHDCNOfmwf2_jqsLadGMWZUHj5ZYQ84RhO8s8K4',
+      },
+    ],
     ['meta', { name: 'theme-color', content: '#7c3aed' }],
     ['meta', { name: 'author', content: 'Oleksii Zlotnik' }],
     [

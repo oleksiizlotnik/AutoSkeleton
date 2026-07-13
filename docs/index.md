@@ -39,3 +39,6 @@ Toggle **loading** to watch the skeleton generate itself from the card's real la
   <UserCard :user="user" />
 </AutoSkeleton>
 ```
+
+See more examples — stat tiles, an article list, and a settings form — on the
+[live demo page →](/guide/demo).

@@ -33,7 +33,7 @@ const rows = [1, 2, 3]
         <AutoSkeleton :loading="loading" :id="`demo-${props.variant}`">
           <!-- Card variant -->
           <article v-if="props.variant === 'card'" class="pc">
-            <img :src="avatar" width="64" height="64" class="pc-avatar" alt="" />
+            <img :src="avatar" width="72" height="72" class="pc-avatar" alt="" />
             <div class="pc-body">
               <h4>Ada Lovelace</h4>
               <p class="pc-role">Principal Engineer</p>
@@ -71,6 +71,8 @@ const rows = [1, 2, 3]
   color: #111827;
 }
 .pc-avatar {
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
   flex: none;
