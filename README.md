@@ -13,6 +13,14 @@ sync automatically because it's derived from the component itself.
 That's it. No `<Skeleton>` tags to place inside `UserCard`, no hand-drawn
 placeholder to keep matching your layout.
 
+## Live demo
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/auto-skeleton-vue)
+
+Toggle **loading** to watch each component's skeleton generate itself. The same
+example lives in [`examples/basic/`](examples/basic) and can be opened straight
+from this repo: [open on StackBlitz from GitHub](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/basic).
+
 ## How it works
 
 The skeleton is always **one render behind**:
