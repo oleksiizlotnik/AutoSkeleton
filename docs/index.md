@@ -1,5 +1,8 @@
 ---
 layout: home
+title: 'auto-skeleton-vue: Vue 3 skeleton loaders that mirror your components'
+titleTemplate: false
+description: Auto-generated Vue 3 skeleton loaders derived from a component's real rendered layout — zero authoring, always in sync. Wrap any component in <AutoSkeleton :loading>.
 
 hero:
   name: auto-skeleton-vue

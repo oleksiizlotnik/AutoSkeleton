@@ -1,0 +1,45 @@
+# auto-skeleton-vue
+
+> Auto-generated skeleton loaders for Vue 3 that mirror a component's real rendered layout. Wrap any component in `<AutoSkeleton :loading>` and it produces a skeleton derived from the component's actual DOM — no separate skeleton component to author, and it stays in sync automatically because it is captured from real renders.
+
+## How it works
+
+The skeleton is always "one render behind":
+
+1. When `loading` is `false`, the real component renders. After paint, AutoSkeleton walks its DOM and captures the layout into a compact, serializable descriptor (text becomes per-line bars, images become blocks), keyed by component identity plus viewport-width bucket.
+2. When `loading` is `true`, it replays the cached descriptor — a pixel-accurate skeleton of the last real render.
+3. On the very first load (no capture yet) it shows a small generic fallback. Enabling `persist` caches geometry in localStorage across reloads and skips that flash.
+
+Because every successful render overwrites the cache, changing a component automatically updates its skeleton. There is no sync step, and the child is never force-rendered without data.
+
+## Usage
+
+```vue
+<AutoSkeleton :loading="isLoading">
+  <UserCard :user="user" />
+</AutoSkeleton>
+```
+
+```ts
+import { createApp } from 'vue'
+import { createAutoSkeleton } from 'auto-skeleton-vue'
+import 'auto-skeleton-vue/style.css'
+
+createApp(App)
+  .use(createAutoSkeleton({ persist: true, animation: true }))
+  .mount('#app')
+```
+
+## Docs
+
+- Getting started: https://oleksiizlotnik.github.io/AutoSkeleton/guide/getting-started
+- How it works: https://oleksiizlotnik.github.io/AutoSkeleton/guide/how-it-works
+- Configuration & theming: https://oleksiizlotnik.github.io/AutoSkeleton/guide/configuration
+- Caching & persistence: https://oleksiizlotnik.github.io/AutoSkeleton/guide/caching
+- Live demo: https://oleksiizlotnik.github.io/AutoSkeleton/guide/demo
+
+## Links
+
+- npm: https://www.npmjs.com/package/auto-skeleton-vue
+- Source: https://github.com/oleksiizlotnik/AutoSkeleton
+- License: MIT

@@ -1,4 +1,21 @@
+---
+title: Configuration & theming
+description: All AutoSkeleton component props and global plugin options — colors, shimmer animation, border radius, persistence, and cache versioning.
+---
+
 # Configuration & theming
+
+## Component props
+
+Everything you pass to `<AutoSkeleton>`:
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `loading` | `boolean` | — (required) | Show the skeleton when `true`, the real content when `false`. |
+| `id` | `string` | derived | Cache identity. Defaults to the wrapped component's name; set it when names may be minified in production, or to segregate a cache entry. |
+| `count` | `number` | `1` | Repeat the captured block N times — for lists whose length isn't known while loading. |
+| `animated` | `boolean` | global | Play the shimmer for this instance (overrides the global default). |
+| `baseColor` / `highlightColor` / `radius` / `duration` | `string` | global | Per-instance theme overrides (see below). |
 
 ## Global defaults
 
@@ -25,7 +42,8 @@ app.use(
 | `duration` | `string` | `1.5s` | Time for one full shimmer sweep. Lower = faster. |
 | `animation` | `boolean` | `true` | Whether the shimmer plays at all. |
 
-See the [plugin API](/api/plugin) for the caching-related options.
+See [Caching & persistence](/guide/caching) for the caching-related options
+(`persist`, `version`, `maxAge`, `maxEntries`, `widthStep`).
 
 ## Per-instance overrides
 

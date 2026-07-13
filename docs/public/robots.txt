@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oleksiizlotnik.github.io/AutoSkeleton/sitemap.xml

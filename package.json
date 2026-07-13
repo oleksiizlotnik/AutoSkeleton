@@ -16,11 +16,22 @@
   "keywords": [
     "vue",
     "vue3",
+    "vue-3",
+    "vuejs",
     "skeleton",
     "skeleton-loader",
+    "skeleton-screen",
+    "skeleton-loading",
     "loading",
+    "loading-placeholder",
     "placeholder",
-    "shimmer"
+    "content-placeholder",
+    "shimmer",
+    "spinner",
+    "loader",
+    "ghost-loading",
+    "composable",
+    "typescript"
   ],
   "files": [
     "dist"
@@ -40,9 +51,8 @@
     "**/*.css"
   ],
   "scripts": {
-    "dev": "vite --config playground/vite.config.ts",
+    "dev": "vitepress dev docs",
     "build": "vite build && vue-tsc -p tsconfig.build.json",
-    "build:playground": "vite build --config playground/vite.config.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",

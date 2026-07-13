@@ -1,3 +1,8 @@
+---
+title: Getting started
+description: Install auto-skeleton-vue, register the plugin, and wrap any Vue 3 component in <AutoSkeleton :loading> to generate a skeleton from its real rendered layout.
+---
+
 # Getting started
 
 `auto-skeleton-vue` generates skeleton loaders for **Vue 3** that mirror a
@@ -78,6 +83,6 @@ and with `persist: true` that mirror survives page reloads. See
 ## Next steps
 
 - [How it works](/guide/how-it-works) — the "one render behind" model
-- [Configuration & theming](/guide/configuration) — colors, animation, per-instance overrides
+- [Configuration & theming](/guide/configuration) — props, colors, animation, per-instance overrides
 - [Caching & persistence](/guide/caching) — TTL, versioning, storage
-- [API reference](/api/) — every prop, option, and export
+- [Live demo](/guide/demo) — every example in one place

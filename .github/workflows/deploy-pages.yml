@@ -1,4 +1,4 @@
-name: Deploy playground to GitHub Pages
+name: Deploy docs to GitHub Pages
 
 on:
   push:
@@ -26,10 +26,10 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build:playground
+      - run: npm run docs:build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: playground/dist
+          path: docs/.vitepress/dist
 
   deploy:
     needs: build

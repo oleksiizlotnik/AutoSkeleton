@@ -14,7 +14,7 @@ function reload() {
 
 // Self-contained inline SVG avatar so the demo needs no network.
 const avatar = computed(() => {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" rx="32" fill="#7c3aed"/></svg>`
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#7c3aed"/></svg>`
   return `data:image/svg+xml,${encodeURIComponent(svg)}`
 })
 
@@ -72,6 +72,7 @@ const rows = [1, 2, 3]
 }
 .pc-avatar {
   border-radius: 50%;
+  object-fit: cover;
   flex: none;
 }
 .pc-body {

@@ -16,7 +16,8 @@ placeholder to keep matching your layout.
 
 ## Live demo
 
-**[Live demo →](https://oleksiizlotnik.github.io/AutoSkeleton/)**
+**[Docs & live demo →](https://oleksiizlotnik.github.io/AutoSkeleton/)** &nbsp;·&nbsp;
+[interactive demo](https://oleksiizlotnik.github.io/AutoSkeleton/guide/demo)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/auto-skeleton-vue)
 

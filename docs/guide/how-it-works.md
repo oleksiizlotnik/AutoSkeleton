@@ -1,3 +1,8 @@
+---
+title: How it works
+description: The "one render behind" model — how auto-skeleton-vue captures a component's DOM geometry on successful renders and replays it as a pixel-accurate skeleton while loading.
+---
+
 # How it works
 
 ## The problem
@@ -48,8 +53,9 @@ content's size changes.
 <Demo variant="list" />
 
 Whatever the last render produced is what's captured — a 3-item list yields a
-3-row skeleton. See [`count`](/api/auto-skeleton#count) for repeating a block
-when the length isn't known yet.
+3-row skeleton. See the **`count`** prop in
+[Configuration](/guide/configuration#component-props) for repeating a block when
+the length isn't known yet.
 
 ## Limitations
 

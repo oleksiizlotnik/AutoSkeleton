@@ -1,3 +1,8 @@
+---
+title: Caching & persistence
+description: How auto-skeleton-vue caches captured geometry in memory or localStorage, with TTL expiry, version namespacing, and LRU eviction.
+---
+
 # Caching & persistence
 
 Captured geometry is stored so it can be replayed on the next load. By default
@@ -41,19 +46,27 @@ app.use(
   layouts self-heal over time.
 - **`maxEntries`** — the cache can never approach the storage quota.
 
-To wipe the cache manually (e.g. on logout), call `clear()` on the store — see
-[Stores](/api/stores).
+To wipe the cache manually (e.g. on logout), read the config and call `clear()`
+on the store:
+
+```ts
+import { useAutoSkeletonConfig } from 'auto-skeleton-vue'
+
+// inside setup()
+const { store } = useAutoSkeletonConfig()
+store.clear() // wipes only this store's namespace
+```
 
 ## How entries are keyed
 
 Each entry is keyed by **component identity + viewport-width bucket**:
 
 - **Identity** comes from the wrapped component's compiled name/file, or an
-  explicit [`id`](/api/auto-skeleton#id) prop. For anonymous components a stable
-  structural hash is used.
+  explicit `id` prop (see [Configuration](/guide/configuration#component-props)).
+  For anonymous components a stable structural hash is used.
 - **Width bucket** snaps the viewport width to a step (default `160px`), so a
   phone layout and a desktop layout of the same component cache separately.
-  Tune it with [`widthStep`](/api/plugin).
+  Tune it with the `widthStep` plugin option.
 
 ```
 UserCard@320   ← narrow layout

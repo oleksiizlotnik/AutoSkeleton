@@ -18,6 +18,6 @@
       "auto-skeleton": ["./src/index.ts"]
     }
   },
-  "include": ["src", "playground", "tests", "*.ts"],
+  "include": ["src", "tests", "*.ts"],
   "exclude": ["dist", "node_modules"]
 }
