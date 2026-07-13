@@ -11,3 +11,7 @@ coverage
 
 # Package tarballs
 *.tgz
+
+# VitePress
+docs/.vitepress/cache
+docs/.vitepress/dist
