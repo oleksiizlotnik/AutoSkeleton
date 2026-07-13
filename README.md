@@ -15,11 +15,10 @@ placeholder to keep matching your layout.
 
 ## Live demo
 
+**[Live demo →](https://oleksiizlotnik.github.io/AutoSkeleton/)** &nbsp;·&nbsp;
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/auto-skeleton-vue)
 
-Toggle **loading** to watch each component's skeleton generate itself. The same
-example lives in [`examples/basic/`](examples/basic) and can be opened straight
-from this repo: [open on StackBlitz from GitHub](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/basic).
+Toggle **loading** to watch each component's skeleton generate itself.
 
 ## How it works
 
