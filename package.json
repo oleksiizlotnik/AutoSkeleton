@@ -1,6 +1,6 @@
 {
   "name": "auto-skeleton-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Auto-generated Vue 3 skeleton loaders that mirror a component's real rendered layout — zero authoring, always in sync.",
   "type": "module",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/oleksiizlotnik/AutoSkeleton.git"
   },
-  "homepage": "https://github.com/oleksiizlotnik/AutoSkeleton#readme",
+  "homepage": "https://oleksiizlotnik.github.io/AutoSkeleton/",
   "bugs": {
     "url": "https://github.com/oleksiizlotnik/AutoSkeleton/issues"
   },
