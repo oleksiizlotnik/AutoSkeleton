@@ -29,6 +29,10 @@ yarn add auto-skeleton-vue
 
 ## Set up the plugin
 
+::: tip Using Nuxt?
+Skip this step — add the module instead. See [Nuxt](/guide/nuxt).
+:::
+
 Register the plugin and **import the stylesheet** (this is required — without it
 the skeleton blocks have no styling and appear invisible):
 
@@ -82,6 +86,7 @@ and with `persist: true` that mirror survives page reloads. See
 
 ## Next steps
 
+- [Nuxt](/guide/nuxt) — module setup, SSR, and data fetching
 - [How it works](/guide/how-it-works) — the "one render behind" model
 - [Configuration & theming](/guide/configuration) — props, colors, animation, per-instance overrides
 - [Caching & persistence](/guide/caching) — TTL, versioning, storage

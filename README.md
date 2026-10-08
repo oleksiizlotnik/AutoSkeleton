@@ -1,7 +1,7 @@
 # auto-skeleton-vue
 [![npm version](https://img.shields.io/npm/v/auto-skeleton-vue.svg)](https://www.npmjs.com/package/auto-skeleton-vue)
 
-Auto-generated skeleton loaders for **Vue 3** that mirror a component's *real
+Auto-generated skeleton loaders for **Vue 3** and **Nuxt** that mirror a component's *real
 rendered layout* — no separate skeleton component to author, and it stays in
 sync automatically because it's derived from the component itself.
 
@@ -74,6 +74,34 @@ LRU-capped by `maxEntries`; call `store.clear()` to wipe it (e.g. on logout).
 You can also import `AutoSkeleton` directly without installing the plugin;
 it falls back to sensible defaults.
 
+### Nuxt
+
+Add the module — components, composables, and the stylesheet are wired up for
+you, and rendering is SSR-safe:
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: ['auto-skeleton-vue/nuxt'],
+  autoSkeleton: { persist: true }, // same options as createAutoSkeleton()
+})
+```
+
+```vue
+<script setup lang="ts">
+const { data: user, status } = useLazyFetch('/api/user')
+</script>
+
+<template>
+  <AutoSkeleton :loading="status === 'pending'">
+    <UserCard :user="user" />
+  </AutoSkeleton>
+</template>
+```
+
+See the [Nuxt guide](https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt) for
+SSR details, client-only fetches, and custom stores.
+
 ## `<AutoSkeleton>` props
 
 | Prop             | Type      | Default | Description                                              |
@@ -87,12 +115,13 @@ it falls back to sensible defaults.
 | `radius`         | `string`  | —       | Border radius for media/box primitives.                  |
 | `duration`       | `string`  | —       | Shimmer animation duration.                              |
 
-## Limitations (v1)
+## Limitations
 
 - First-ever load shows a generic fallback (mitigated by `persist`).
 - Responsive reflow is handled by width-bucketed cache keys + resize
   re-capture, not by live reflow of a captured descriptor.
-- SSR/Nuxt is out of scope for v1 — capture is client-only.
+- Capture is client-only. Server rendering works (and hydrates cleanly), but a
+  loading state rendered on the server shows the fallback until the page mounts.
 - Pseudo-elements, CSS transforms, and `position: sticky` are approximated.
 
 ## License

@@ -62,5 +62,7 @@ the length isn't known yet.
 - **First-ever load** shows a generic fallback (mitigated by `persist`).
 - **Responsive reflow** is handled by width-bucketed cache keys + resize
   re-capture, not by live reflow of a captured descriptor.
-- **SSR/Nuxt** — capture is client-only; guard usage accordingly.
+- **SSR** — capture is client-only. Server rendering works and hydrates
+  cleanly, but a loading state rendered on the server shows the fallback until
+  the page mounts. See [Nuxt](/guide/nuxt).
 - Pseudo-elements, CSS transforms, and `position: sticky` are approximated.

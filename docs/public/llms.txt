@@ -1,6 +1,6 @@
 # auto-skeleton-vue
 
-> Auto-generated skeleton loaders for Vue 3 that mirror a component's real rendered layout. Wrap any component in `<AutoSkeleton :loading>` and it produces a skeleton derived from the component's actual DOM — no separate skeleton component to author, and it stays in sync automatically because it is captured from real renders.
+> Auto-generated skeleton loaders for Vue 3 and Nuxt that mirror a component's real rendered layout. Wrap any component in `<AutoSkeleton :loading>` and it produces a skeleton derived from the component's actual DOM — no separate skeleton component to author, and it stays in sync automatically because it is captured from real renders.
 
 ## How it works
 
@@ -30,9 +30,22 @@ createApp(App)
   .mount('#app')
 ```
 
+### Nuxt
+
+```ts
+// nuxt.config.ts — registers <AutoSkeleton>, composables, and the stylesheet; SSR-safe
+export default defineNuxtConfig({
+  modules: ['auto-skeleton-vue/nuxt'],
+  autoSkeleton: { persist: true },
+})
+```
+
+Drive `loading` from `useLazyFetch`'s `status === 'pending'` (a blocking `await useFetch` never shows a loading state). With `server: false`, use `status === 'idle' || status === 'pending'`.
+
 ## Docs
 
 - Getting started: https://oleksiizlotnik.github.io/AutoSkeleton/guide/getting-started
+- Nuxt: https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt
 - How it works: https://oleksiizlotnik.github.io/AutoSkeleton/guide/how-it-works
 - Configuration & theming: https://oleksiizlotnik.github.io/AutoSkeleton/guide/configuration
 - Caching & persistence: https://oleksiizlotnik.github.io/AutoSkeleton/guide/caching

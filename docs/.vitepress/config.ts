@@ -97,6 +97,7 @@ export default defineConfig({
           text: 'Guide',
           items: [
             { text: 'Getting started', link: '/guide/getting-started' },
+            { text: 'Nuxt', link: '/guide/nuxt' },
             { text: 'How it works', link: '/guide/how-it-works' },
             { text: 'Configuration & theming', link: '/guide/configuration' },
             { text: 'Caching & persistence', link: '/guide/caching' },
