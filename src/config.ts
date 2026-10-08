@@ -34,7 +34,9 @@ export interface AutoSkeletonConfig {
   theme: AutoSkeletonTheme
 }
 
-export const AUTO_SKELETON_KEY: InjectionKey<AutoSkeletonConfig> = Symbol('auto-skeleton')
+// A registered symbol, so provide/inject still match if the library ends up
+// loaded twice (e.g. inlined in one SSR bundle and externalized in another).
+export const AUTO_SKELETON_KEY: InjectionKey<AutoSkeletonConfig> = Symbol.for('auto-skeleton')
 
 export function resolveConfig(options: AutoSkeletonOptions = {}): AutoSkeletonConfig {
   const store =
@@ -62,10 +64,14 @@ export function resolveConfig(options: AutoSkeletonOptions = {}): AutoSkeletonCo
 /** Fallback config for components used without installing the plugin. */
 let defaultConfig: AutoSkeletonConfig | null = null
 export function getDefaultConfig(): AutoSkeletonConfig {
+  // On the server a module-level store would be shared by every request; hand
+  // out a fresh one instead (nothing is ever captured during SSR anyway).
+  if (typeof window === 'undefined') return resolveConfig()
   if (!defaultConfig) defaultConfig = resolveConfig()
   return defaultConfig
 }
 
 export function useAutoSkeletonConfig(): AutoSkeletonConfig {
-  return inject(AUTO_SKELETON_KEY, getDefaultConfig())
+  // Factory form: the fallback is only built when no config was provided.
+  return inject(AUTO_SKELETON_KEY, getDefaultConfig, true)
 }
