@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 // Canonical origin for the deployed site (GitHub project Pages subpath).
 const HOSTNAME = 'https://oleksiizlotnik.github.io/AutoSkeleton'
 const DESCRIPTION =
-  'Auto-generated Vue 3 skeleton loaders that mirror a component’s real rendered layout — no separate skeleton to author, and it stays in sync automatically.'
+  'Auto-generated Vue 3 & Nuxt skeleton loaders that mirror a component’s real rendered layout — no separate skeleton to author, and it stays in sync automatically.'
 
 // Docs are served from the /AutoSkeleton/ subpath on GitHub Pages.
 export default defineConfig({
@@ -37,7 +37,7 @@ export default defineConfig({
       {
         name: 'keywords',
         content:
-          'vue, vue 3, skeleton, skeleton loader, skeleton screen, loading placeholder, shimmer, content placeholder, vue skeleton, auto skeleton',
+          'vue, vue 3, nuxt, nuxt module, nuxt skeleton, ssr, skeleton, skeleton loader, skeleton screen, loading placeholder, shimmer, content placeholder, vue skeleton, auto skeleton',
       },
     ],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -53,7 +53,7 @@ export default defineConfig({
         description: DESCRIPTION,
         codeRepository: 'https://github.com/oleksiizlotnik/AutoSkeleton',
         programmingLanguage: 'TypeScript',
-        runtimePlatform: 'Vue 3',
+        runtimePlatform: ['Vue 3', 'Nuxt'],
         license: 'https://opensource.org/licenses/MIT',
         author: { '@type': 'Person', name: 'Oleksii Zlotnik' },
         url: `${HOSTNAME}/`,
@@ -88,6 +88,10 @@ export default defineConfig({
     nav: [
       { text: 'Guide', link: '/guide/getting-started' },
       { text: 'Demo', link: '/guide/demo' },
+      {
+        text: 'Changelog',
+        link: 'https://github.com/oleksiizlotnik/AutoSkeleton/blob/main/CHANGELOG.md',
+      },
       { text: 'npm', link: 'https://www.npmjs.com/package/auto-skeleton-vue' },
     ],
 
