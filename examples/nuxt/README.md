@@ -23,4 +23,4 @@ npm run dev
 ```
 
 See the [Nuxt guide](https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt)
-for the full setup.
+for the full setup. Using plain Vue? See the [Vue example](../vue).
