@@ -3,6 +3,24 @@
 All notable changes to `auto-skeleton-vue` are documented here. The project
 follows [Semantic Versioning](https://semver.org).
 
+## [1.0.1] — 2026-10-10
+
+Docs and examples only; the library code is unchanged.
+
+### Added
+
+- **Nuxt example** in [`examples/nuxt`](https://github.com/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt),
+  runnable in the browser on
+  [StackBlitz](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt):
+  server-rendered, lazy, and client-only loading.
+- Nuxt guide: one-line install with `npx nuxi module add auto-skeleton-vue`, and
+  tips for wrapping plain elements (give them an `id`) and keeping content
+  visible while refreshing.
+
+### Changed
+
+- The README on npm now includes the Nuxt section, badges, and changelog link.
+
 ## [1.0.0] — 2026-10-08
 
 Nuxt support, and a stable API. No breaking changes: existing Vue apps upgrade
@@ -49,4 +67,5 @@ Initial release.
 - In-memory cache, plus an opt-in persistent localStorage cache with expiry, an
   entry cap and version namespacing.
 
+[1.0.1]: https://github.com/oleksiizlotnik/AutoSkeleton/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/oleksiizlotnik/AutoSkeleton/compare/0412812...v1.0.0

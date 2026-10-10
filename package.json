@@ -1,6 +1,6 @@
 {
   "name": "auto-skeleton-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Auto-generated Vue 3 & Nuxt skeleton loaders that mirror a component's real rendered layout — zero authoring, always in sync.",
   "type": "module",
   "license": "MIT",
