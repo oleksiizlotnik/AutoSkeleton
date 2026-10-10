@@ -19,5 +19,8 @@ no skeleton markup was written for any of them. Notice how:
 - **grids and lists** keep their structure,
 - editing a component would change its skeleton on the next render, with nothing to keep in sync.
 
+Want to edit the code? Open the [Vue example](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/vue) or the
+[Nuxt example](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt) on StackBlitz.
+
 See [How it works](/guide/how-it-works) for the mechanism, or
 [Getting started](/guide/getting-started) to add it to your app.

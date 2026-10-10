@@ -26,7 +26,9 @@ placeholder to keep matching your layout.
 **[Docs & live demo →](https://oleksiizlotnik.github.io/AutoSkeleton/)** &nbsp;·&nbsp;
 [interactive demo](https://oleksiizlotnik.github.io/AutoSkeleton/guide/demo)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/auto-skeleton-vue)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/vue)
+
+Runnable examples, both open in StackBlitz straight from this repo: [Vue](https://github.com/oleksiizlotnik/AutoSkeleton/tree/main/examples/vue) · [Nuxt](https://github.com/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt).
 
 Toggle **loading** to watch each component's skeleton generate itself.
 

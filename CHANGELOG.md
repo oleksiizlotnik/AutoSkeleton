@@ -13,6 +13,9 @@ Docs and examples only; the library code is unchanged.
   runnable in the browser on
   [StackBlitz](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt):
   server-rendered, lazy, and client-only loading.
+- **Vue example** in [`examples/vue`](https://github.com/oleksiizlotnik/AutoSkeleton/tree/main/examples/vue), the playground that previously
+  lived only on StackBlitz, now in the repo and on 1.0. It opens on
+  [StackBlitz](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/vue) straight from GitHub, so it stays in sync.
 - Nuxt guide: one-line install with `npx nuxi module add auto-skeleton-vue`, and
   tips for wrapping plain elements (give them an `id`) and keeping content
   visible while refreshing.
