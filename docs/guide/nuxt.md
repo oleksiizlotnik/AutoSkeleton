@@ -10,13 +10,23 @@ composables as auto-imports, adds the stylesheet, and provides your options to
 every component — on the server and in the browser. Works with Nuxt 3.10+ and
 Nuxt 4.
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt)
+
+Try the [Nuxt example](https://github.com/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt)
+in your browser: server-rendered, lazy, and client-only loading, one page each.
+
 ## Install
+
+```sh
+npx nuxi module add auto-skeleton-vue
+```
+
+This installs the package and adds the module to `nuxt.config`. Or do it by
+hand:
 
 ```sh
 npm i auto-skeleton-vue
 ```
-
-Then add the module:
 
 ```ts
 // nuxt.config.ts
@@ -90,6 +100,34 @@ const { data: user, status } = useLazyFetch('/api/user', { server: false })
     <UserCard :user="user" />
   </AutoSkeleton>
 </template>
+```
+
+## Tips
+
+### Wrapping a plain element
+
+The captured layout is cached under the wrapped component's name. When the
+direct child is a plain element instead, such as a `<div>` or `<ul>` around a
+list, every wrapper around the same tag shares one cache entry, and they replay
+each other's layout. Give each one an `id`:
+
+```vue
+<AutoSkeleton id="team-list" :loading="status === 'pending'">
+  <ul>
+    <li v-for="member in team" :key="member.id">{{ member.name }}</li>
+  </ul>
+</AutoSkeleton>
+```
+
+### Keeping content visible while refreshing
+
+During `refresh()`, `status` is `'pending'` but `data` still holds the previous
+result. To show the skeleton only when there's nothing to show yet:
+
+```vue
+<AutoSkeleton :loading="status === 'pending' && !data">
+  <UserCard :user="user" />
+</AutoSkeleton>
 ```
 
 ## Runtime config

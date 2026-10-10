@@ -1,7 +1,7 @@
 # auto-skeleton-vue
 [![npm version](https://img.shields.io/npm/v/auto-skeleton-vue.svg)](https://www.npmjs.com/package/auto-skeleton-vue)
 [![Nuxt 3 & 4](https://img.shields.io/badge/Nuxt-3%20%26%204-00DC82?logo=nuxt&logoColor=white)](https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt)
-[![license](https://img.shields.io/npm/l/auto-skeleton-vue.svg)](LICENSE)
+[![license](https://img.shields.io/npm/l/auto-skeleton-vue.svg)](https://github.com/oleksiizlotnik/AutoSkeleton/blob/main/LICENSE)
 
 Auto-generated skeleton loaders for **Vue 3** and **Nuxt** that mirror a component's *real
 rendered layout* — no separate skeleton component to author, and it stays in
@@ -10,7 +10,7 @@ sync automatically because it's derived from the component itself.
 > **New in 1.0 — Nuxt support.** Add `modules: ['auto-skeleton-vue/nuxt']` and
 > `<AutoSkeleton>` is auto-imported, styled, and SSR-safe. See the
 > [Nuxt guide](https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt) and the
-> [changelog](CHANGELOG.md).
+> [changelog](https://github.com/oleksiizlotnik/AutoSkeleton/blob/main/CHANGELOG.md).
 
 ```vue
 <AutoSkeleton :loading="isLoading">
@@ -86,6 +86,12 @@ it falls back to sensible defaults.
 Add the module — components, composables, and the stylesheet are wired up for
 you, and rendering is SSR-safe:
 
+```sh
+npx nuxi module add auto-skeleton-vue
+```
+
+or add it to `nuxt.config` yourself:
+
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
@@ -107,7 +113,10 @@ const { data: user, status } = useLazyFetch('/api/user')
 ```
 
 See the [Nuxt guide](https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt) for
-SSR details, client-only fetches, and custom stores.
+SSR details, client-only fetches, and custom stores, or try the
+[Nuxt example](https://github.com/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt) in your browser:
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt)
 
 ## `<AutoSkeleton>` props
 

@@ -33,6 +33,7 @@ createApp(App)
 ### Nuxt
 
 ```ts
+// npx nuxi module add auto-skeleton-vue — or by hand:
 // nuxt.config.ts — registers <AutoSkeleton>, composables, and the stylesheet; SSR-safe
 export default defineNuxtConfig({
   modules: ['auto-skeleton-vue/nuxt'],
@@ -46,6 +47,7 @@ Drive `loading` from `useLazyFetch`'s `status === 'pending'` (a blocking `await 
 
 - Getting started: https://oleksiizlotnik.github.io/AutoSkeleton/guide/getting-started
 - Nuxt: https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt
+- Nuxt example (runs on StackBlitz): https://github.com/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt
 - How it works: https://oleksiizlotnik.github.io/AutoSkeleton/guide/how-it-works
 - Configuration & theming: https://oleksiizlotnik.github.io/AutoSkeleton/guide/configuration
 - Caching & persistence: https://oleksiizlotnik.github.io/AutoSkeleton/guide/caching

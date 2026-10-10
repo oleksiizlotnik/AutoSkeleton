@@ -12,7 +12,7 @@ Everything you pass to `<AutoSkeleton>`:
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
 | `loading` | `boolean` | — (required) | Show the skeleton when `true`, the real content when `false`. |
-| `id` | `string` | derived | Cache identity. Defaults to the wrapped component's name; set it when names may be minified in production, or to segregate a cache entry. |
+| `id` | `string` | derived | Cache identity. Defaults to the wrapped component's name; set it when names may be minified in production, when the wrapped content is a plain element rather than a component (same-tag wrappers would otherwise share one entry), or to segregate a cache entry. |
 | `count` | `number` | `1` | Repeat the captured block N times — for lists whose length isn't known while loading. |
 | `animated` | `boolean` | global | Play the shimmer for this instance (overrides the global default). |
 | `baseColor` / `highlightColor` / `radius` / `duration` | `string` | global | Per-instance theme overrides (see below). |
