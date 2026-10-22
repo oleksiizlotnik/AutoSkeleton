@@ -5,10 +5,11 @@ description: Use auto-skeleton-vue in Nuxt 3 and 4 with the built-in module — 
 
 # Nuxt
 
-`auto-skeleton-vue` ships a Nuxt module. It registers `<AutoSkeleton>` and the
-composables as auto-imports, adds the stylesheet, and provides your options to
-every component — on the server and in the browser. Works with Nuxt 3.10+ and
-Nuxt 4.
+`auto-skeleton-vue` ships a Nuxt module, listed in the Nuxt module directory as
+[auto-skeleton](https://nuxt.com/modules/auto-skeleton). It registers
+`<AutoSkeleton>` and the composables as auto-imports, adds the stylesheet, and
+provides your options to every component — on the server and in the browser.
+Works with Nuxt 3.10+ and Nuxt 4.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt)
 

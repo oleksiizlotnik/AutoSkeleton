@@ -1,6 +1,6 @@
 # auto-skeleton-vue
 [![npm version](https://img.shields.io/npm/v/auto-skeleton-vue.svg)](https://www.npmjs.com/package/auto-skeleton-vue)
-[![Nuxt 3 & 4](https://img.shields.io/badge/Nuxt-3%20%26%204-00DC82?logo=nuxt&logoColor=white)](https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt)
+[![Nuxt 3 & 4](https://img.shields.io/badge/Nuxt-3%20%26%204-00DC82?logo=nuxt&logoColor=white)](https://nuxt.com/modules/auto-skeleton)
 [![license](https://img.shields.io/npm/l/auto-skeleton-vue.svg)](https://github.com/oleksiizlotnik/AutoSkeleton/blob/main/LICENSE)
 
 Auto-generated skeleton loaders for **Vue 3** and **Nuxt** that mirror a component's *real
@@ -9,7 +9,8 @@ sync automatically because it's derived from the component itself.
 
 > **New in 1.0 — Nuxt support.** Add `modules: ['auto-skeleton-vue/nuxt']` and
 > `<AutoSkeleton>` is auto-imported, styled, and SSR-safe. See the
-> [Nuxt guide](https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt) and the
+> [Nuxt guide](https://oleksiizlotnik.github.io/AutoSkeleton/guide/nuxt), the
+> [module listing on nuxt.com](https://nuxt.com/modules/auto-skeleton), and the
 > [changelog](https://github.com/oleksiizlotnik/AutoSkeleton/blob/main/CHANGELOG.md).
 
 ```vue
@@ -85,8 +86,9 @@ it falls back to sensible defaults.
 
 ### Nuxt
 
-Add the module — components, composables, and the stylesheet are wired up for
-you, and rendering is SSR-safe:
+Add the module ([auto-skeleton on nuxt.com](https://nuxt.com/modules/auto-skeleton)) —
+components, composables, and the stylesheet are wired up for you, and rendering
+is SSR-safe:
 
 ```sh
 npx nuxi module add auto-skeleton-vue

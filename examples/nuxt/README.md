@@ -2,8 +2,9 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oleksiizlotnik/AutoSkeleton/tree/main/examples/nuxt)
 
-A small Nuxt 4 app using the `auto-skeleton-vue/nuxt` module. Each page shows
-one way of loading data:
+A small Nuxt 4 app using the `auto-skeleton-vue/nuxt` module
+([auto-skeleton on nuxt.com](https://nuxt.com/modules/auto-skeleton)). Each page
+shows one way of loading data:
 
 - **Server-rendered** (`/`): the card is rendered on the server. Press
   Refresh to see the skeleton generated from its real layout.

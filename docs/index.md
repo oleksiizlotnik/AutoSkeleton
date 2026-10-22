@@ -61,4 +61,6 @@ export default defineNuxtConfig({
 })
 ```
 
-See the [Nuxt guide →](/guide/nuxt) for SSR details and data fetching.
+See the [Nuxt guide →](/guide/nuxt) for SSR details and data fetching, or find
+it in the Nuxt module directory as
+[auto-skeleton](https://nuxt.com/modules/auto-skeleton).
