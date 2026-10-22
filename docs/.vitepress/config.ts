@@ -93,6 +93,7 @@ export default defineConfig({
         link: 'https://github.com/oleksiizlotnik/AutoSkeleton/blob/main/CHANGELOG.md',
       },
       { text: 'npm', link: 'https://www.npmjs.com/package/auto-skeleton-vue' },
+      { text: 'nuxt.com', link: 'https://nuxt.com/modules/auto-skeleton' },
     ],
 
     sidebar: {
